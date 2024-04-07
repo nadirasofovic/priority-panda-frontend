@@ -1,0 +1,16 @@
+<section>
+  <div id="workspaces">
+    <h2>Your workspaces:</h2>
+  </div>
+  <div id="flex">
+    <div class="flexItem" *ngFor="let workspace of allworkspaces">
+      <h2>{{workspace.title}}</h2>
+      <p>{{workspace.description}}</p>
+    </div>
+    <button class="flexItem" [routerLink]="'../addWorkspace'">+</button>
+  </div>
+  <div id="navigation">
+    <p>View: </p>
+    <a href="" (click)="goToCalendar()"> Calendar </a>
+  </div>
+</section>
