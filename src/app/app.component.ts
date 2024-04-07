@@ -5,6 +5,7 @@ import {FormGroup,ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from "./header/header.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { FooterComponent } from "./footer/footer.component";
+import {WorkspacetasksService} from "./services/workspacetasks";
 
 
 @Component({
@@ -17,3 +18,4 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent {
   title = 'priority-panda';
 }
+

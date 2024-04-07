@@ -5,13 +5,13 @@
     <h2>Software Engineering Project</h2>
   </div> <br>
 
-  <div id="flex">
+  <div id="flex" >
 
     <div class="prvi">
     <h2>To-Do</h2>
-    <div class="to-do">
-      <h3>Hanadi: Create Visual Mockups</h3>
-      <h3>Due Date:13.03.2024.</h3>
+    <div class="to-do" *ngFor="let workspace of allworkspaces" >
+      <h3>{{workspace.title}}</h3>
+      <p>{{workspace.description}}</p>
       <a href=""> Add Comment</a> <br>
       <a href=""> Edit </a>
       <a href=""> Delete </a>
