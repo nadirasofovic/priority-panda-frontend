@@ -1,0 +1,68 @@
+header {
+  background-color: #d7cdcc;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space between;
+  align-items: center;
+}
+
+#titleAndIcon {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 70px;
+  height: 60px;
+}
+
+.content {
+    margin-top:50px;
+    text-align: center;
+}
+
+.login-button {
+    font-weight: bold;
+    padding: 15px 25px;
+    background-color: #d7cdcc;
+    color: purple;
+    border: none;
+    border-radius: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 320px;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: purple;
+    color: white;
+}
+
+.arrow {
+    margin-left: 100px;
+    margin-top: -25px;
+    margin-right: 10px;
+    color: purple;
+    font-size: 120px;
+}
+
+.bottom-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 300px;
+}
+
+.join-us {
+  margin-bottom: 10px;
+  margin-right: 160px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.purple {
+  color: purple;
+}
