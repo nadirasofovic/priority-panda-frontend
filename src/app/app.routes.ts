@@ -1,5 +1,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { RouterModule,Routes } from '@angular/router';
+import {AddWorkspacesComponent} from "./components/add-workspaces/add-workspaces.component";
+import {WorkspacesComponent} from "./components/workspaces/workspaces.component";
+
+export const routes: Routes = [
+  {
+    path: "addWorkspace",
+    component: AddWorkspacesComponent
+  },
+  {
+    path: "Workspaces",
+    component: WorkspacesComponent
+  }
+  ]
+=======
+>>>>>>> origin/main
 import { RouterModule, Routes } from '@angular/router';
 import {HomepageComponent} from "./homepage/homepage.component";
 import {NgModule} from "@angular/core";
@@ -15,6 +33,7 @@ component:HomepageComponent
   component:WorkspacepageComponent
   }
 ]
+>>>>>>> origin/main
 =======
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router"

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "priority-panda-frontend",
+=======
   "name": "priority-panda",
+>>>>>>> origin/main
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,6 +17,10 @@
   "dependencies": {
     "@angular/animations": "^17.3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
+    "@angular/cdk": "^17.3.2",
+=======
+>>>>>>> origin/main
 =======
     "@angular/cdk": "^17.3.3",
 >>>>>>> origin/main
@@ -21,6 +29,10 @@
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
+    "@angular/material": "^17.3.2",
+=======
+>>>>>>> origin/main
 =======
     "@angular/material": "^17.3.3",
 >>>>>>> origin/main
