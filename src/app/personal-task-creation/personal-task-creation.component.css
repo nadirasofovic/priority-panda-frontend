@@ -1,0 +1,150 @@
+header {
+
+  background-color: lightgrey;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+
+.logo {
+
+  width: 50px;
+
+  height: 50px;
+
+}
+
+
+
+.nav-buttons button {
+
+  margin-left: 10px;
+
+  background-color: purple;
+
+  color: white;
+
+  border: none;
+
+  padding: 5px 10px;
+
+  cursor: pointer;
+
+}
+
+
+
+main {
+
+  background-color: white;
+
+  padding: 20px;
+
+}
+
+
+
+.content-container {
+
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+
+
+.form-container {
+
+  width: 60%;
+
+}
+
+
+
+.personal-list {
+
+  width: 35%;
+
+  border-left: 1px solid lightgrey;
+
+  padding-left: 20px;
+
+}
+
+
+
+footer {
+
+  background-color: lightgrey;
+
+  padding: 10px;
+
+  text-align: center;
+
+}
+
+
+
+label {
+
+  font-weight: bold;
+
+  color: black;
+
+  margin-bottom: 5px;
+
+}
+
+
+
+input, select, textarea {
+
+  width: 100%;
+
+  padding: 5px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.form-group {
+
+  margin-bottom: 15px;
+
+}
+
+
+
+button[type="submit"] {
+
+  background-color: purple;
+
+  color: white;
+
+  border: none;
+
+  padding: 8px 20px;
+
+  cursor: pointer;
+
+}
+
+
+
+button[type="submit"]:hover {
+
+  background-color: purple;
+
+}
+
