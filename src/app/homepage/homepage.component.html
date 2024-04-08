@@ -1,0 +1,56 @@
+
+  <section>
+    <div class="main">
+    <div class="naslov">
+      <h1>Stay organized and <br> efficient with <br> PriorityPanda!</h1>
+      <h3>Manage tasks, plan schedules, and <br> collaborate with your team on our <br> dynamic platform.</h3>
+    </div>
+
+      <div class="spajanje">
+    <div id="Register"> <br>
+      <h3> Get Started ! </h3>
+
+      <form [formGroup]="form" (ngSubmit)="submitData({type : 'signup'})">
+        <div class="inputs">
+          <label for="email1">E-mail:</label>
+          <input type="text" id="email1" name="email1" formControlName="email">
+        </div>
+
+        <div class="inputs">
+          <label for="username1">Username:</label>
+          <input type="text" id="username1" name="username1" formControlName="username">
+        </div>
+
+        <div class="inputs">
+          <label for="password1">Password: </label>
+          <input type="text" id="password1" name="password1" formControlName="password">
+          <input type="hidden" formControlName="isLogin">
+        </div>
+        <button class="regslika" type="submit"><img src="assets/reg.png"></button>
+      </form>
+    </div>
+
+    <div id="Login">
+      <h3>Already have an account? Log in:</h3>
+      <form [formGroup]="form" (ngSubmit)="submitData({type : 'login'})">
+        <div class="inputs2">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username2" formControlName="username">
+        </div>
+
+        <div class="inputs2">
+          <label for="password">Password: </label>
+          <input type="text" id="password" name="password" formControlName="password">
+          <input type="hidden" formControlName="isLogin">
+        </div> <br>
+        <button class="logslika" type="submit"><img src="assets/log.png"></button>
+      </form>
+    </div>
+      </div>
+
+    </div>
+    <img class="prva" src="assets/pandisama.png">
+  </section>
+
+
+
