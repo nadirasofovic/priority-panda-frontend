@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
+<<<<<<< HEAD
+export class HeaderComponent{
+  goToHome(){
+    return console.log("This navigates to homepage");
+  }
+  goToSignOut(){
+    return console.log("THis navigates to sign out page");
+  }
+}
+
+=======
 export class HeaderComponent {
   goToHome() {
     return console.log("This page navigates to Home.");
@@ -15,3 +26,4 @@ export class HeaderComponent {
     return console.log("This page navigates to SignOut page.");
   }
 }
+>>>>>>> origin/main
