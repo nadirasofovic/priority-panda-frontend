@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 header {
   background-color: #d7cdcc;
   width: 100%;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 #content {
   background-color: #d7cdcc;
   padding: 20px;
@@ -13,20 +20,37 @@ header {
   align-items: center;
 }
 
+<<<<<<< HEAD
 h1 {
   font-weight: bold;
 }
 
 img {
+=======
+#titleAndIcon {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+>>>>>>> origin/main
   width: 70px;
   height: 60px;
 }
 
+<<<<<<< HEAD
 #buttons {
   display: flex;
 }
 
 #buttons > button {
+=======
+header #buttons {
+  display: flex;
+}
+
+header #buttons button {
+>>>>>>> origin/main
   margin-left: 20px;
   background-color: #9c528b;
   color: white;
@@ -35,6 +59,7 @@ img {
   font-size: 20px;
   border: #9c528b;
   border-radius: 5px;
+<<<<<<< HEAD
 }
 
 button:hover {
@@ -54,4 +79,12 @@ button:hover {
     width: 600px;
     padding: 10px;
   }
+=======
+  cursor: pointer;
+}
+
+header #buttons button:hover {
+  box-shadow: 5px 5px 5px #444444;
+  background-color: #8f4b7f;
+>>>>>>> origin/main
 }

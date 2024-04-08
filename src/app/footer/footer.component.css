@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 footer{
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+footer {
+  background-color: #d7cdcc;
+  padding: 20px;
+  font-size: 20px;
+  font-family: Arial;
+  text-align: center;
+}
+
+#content2 {
+  width: 1100px;
+>>>>>>> origin/main
 }

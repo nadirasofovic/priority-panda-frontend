@@ -2,6 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
@@ -11,7 +15,11 @@ describe('FooterComponent', () => {
       imports: [FooterComponent]
     })
     .compileComponents();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/main
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
