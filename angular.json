@@ -31,7 +31,12 @@
 >>>>>>> origin/main
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -99,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "31548e5c-958a-44a1-b73c-8dc9446feea3"
   }
 }
