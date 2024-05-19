@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:priority-panda": "node dist/priority-panda/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -18,19 +19,27 @@
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
+<<<<<<< HEAD
     "angular-calendar": "^0.31.1",
     "angularx-flatpickr": "^7.3.0",
     "date-fns": "^3.6.0",
+=======
+    "@angular/ssr": "^17.3.3",
+    "express": "^4.18.2",
+>>>>>>> origin/main
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.0",
-    "@angular/cli": "^17.3.0",
+    "@angular-devkit/build-angular": "^17.3.3",
+    "@angular/cli": "^17.3.3",
     "@angular/compiler-cli": "^17.3.0",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -39,5 +48,17 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
   }
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/main
+=======
+}
+>>>>>>> ed1e1901a44e0d5fbb1b87673a1930310cac6ef4
+>>>>>>> origin/main
