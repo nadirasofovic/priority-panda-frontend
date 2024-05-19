@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
+import {HttpClient} from "@angular/common/http";
+import {WorkspaceDto} from "../methods/workspace-dto.interface";
 
 @Injectable({providedIn: "root"})
 
 export class ViewWorkspacesService {
-  public getWorkspace(): Observable<any[]> {
-    return of([
-      {title: 'Workspace 1', description:'Workspace description'},
-      {title: 'Workspace 2', description:'Workspace description'},
-      {title: 'Workspace 3', description:'Workspace description'},
-      {title: 'Workspace 4', description:'Workspace description'},
-      {title: 'Workspace 5', description:'Workspace description'},
-    ]);
+
+  private url: string = 'https://localhost:8080/workspaces';
+
+  constructor(private http: HttpClient) {
   }
+
+  public getAllWorkspaces() : Observable<WorkspaceDto[]> {
+    return this.http.get<WorkspaceDto[]>(this.url + "/list");
+  }
+
 }

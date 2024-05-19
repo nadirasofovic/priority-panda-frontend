@@ -5,13 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class WorkspaceService {
-  private apiUrl = 'http://example.com/api/workspaces';
+export class deleteWorkspaceService {
+  private url: string = 'https://localhost:8080/workspaces';
 
   constructor(private http: HttpClient) { }
 
-  deleteWorkspace(workspaceId: number): Observable<any> {
-    const url = `${this.apiUrl}/${workspaceId}`;
-    return this.http.delete(url);
-  }
+ public deleteWorkspace(id : number): Observable<void> {
+    return this.http.delete<void>(this.url + '/' + id);
+ }
 }
