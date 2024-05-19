@@ -3,14 +3,20 @@
     <h2>Your workspaces:</h2>
   </div>
   <div id="flex">
-    <div class="flexItem" *ngFor="let workspace of allworkspaces">
-      <h2>{{workspace.title}}</h2>
-      <p>{{workspace.description}}</p>
+    <div class="flexItem" *ngFor="let workspace of allWorkspaces">
+      <h2>{{ workspace.title }}</h2>
+      <p>{{ workspace.description }}</p>
+      <div class="buttonContainer">
+        <button (click)="openWorkspace(workspace.id)">Open</button>
+        <button (click)="editWorkspace(workspace.id, { })">Edit</button>
+        <button>Delete</button>
+      </div>
     </div>
     <button class="flexItem" [routerLink]="'../addWorkspace'">+</button>
   </div>
   <div id="navigation">
-    <p>View: </p>
-    <a href="" (click)="goToCalendar()"> Calendar </a>
+    <p>View:</p>
+    <a href="#" (click)="goToCalendar()">Calendar</a>
   </div>
 </section>
+

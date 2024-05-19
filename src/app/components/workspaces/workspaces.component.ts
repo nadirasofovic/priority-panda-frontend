@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewWorkspaceService } from "../../services/view-workspace-service";
+import { ViewWorkspacesService } from "../../services/view-workspaces-service";
 import {RouterLink} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
+import {WorkspaceService} from "../../services/view-workspace-service";
+import { EditWorkspaceService } from "../../services/edit-workspace-service";
+
 
 @Component({
   selector: 'app-workspaces',
@@ -19,13 +22,16 @@ import {NgForOf} from "@angular/common";
 
 export class WorkspacesComponent implements OnInit {
 
-  allworkspaces: any[] = [];
+  allWorkspaces: any[] = [];
 
-  constructor(private service: ViewWorkspaceService) {}
+  constructor(private viewWorkspacesService: ViewWorkspacesService,
+              private workspaceService: WorkspaceService,
+              private editWorkspaceService: EditWorkspaceService) {
+  }
 
   ngOnInit(): void {
-    this.service.getWorkspace().subscribe(workspace => {
-      this.allworkspaces = workspace;
+    this.viewWorkspacesService.getWorkspace().subscribe(workspace => {
+      this.allWorkspaces = workspace;
     });
   }
 
@@ -35,5 +41,16 @@ export class WorkspacesComponent implements OnInit {
 
   addWorkspace() {
     console.log("This navigates to page for workspace addition");
+  }
+
+  openWorkspace(workspaceId: number): void {
+    this.workspaceService.openWorkspaceById(workspaceId);
+  }
+
+  editWorkspace(workspaceId: number, updatedWorkspaceData: any): void {
+    this.editWorkspaceService.editWorkspace(workspaceId, updatedWorkspaceData)
+      .subscribe(response => {
+        console.log(response);
+      });
   }
 }
