@@ -3,14 +3,29 @@
     <h2>Your workspaces:</h2>
   </div>
   <div id="flex">
-    <div class="flexItem" *ngFor="let workspace of allworkspaces">
-      <h2>{{workspace.title}}</h2>
-      <p>{{workspace.description}}</p>
+    <div class="flexItem" *ngFor="let workspace of workspaces">
+      <div *ngIf="!workspace.isEditing">
+        <h2>{{ workspace.title }}</h2>
+        <p>{{ workspace.description }}</p>
+      </div>
+      <div *ngIf="workspace.isEditing">
+        <input type="text" [(ngModel)]="workspace.title" placeholder="Edit title" />
+        <textarea [(ngModel)]="workspace.description" placeholder="Edit description"></textarea>
+      </div>
+      <div class="buttonContainer">
+        <button type="button" *ngIf="!workspace.isEditing" (click)="getOneWorkspace(workspace.id)">Open</button>
+        <button *ngIf="!workspace.isEditing" (click)="workspace.isEditing = true">Edit</button>
+        <button *ngIf="workspace.isEditing" (click)="saveWorkspace(workspace)">Save</button>
+        <button type="button" (click)="deleteWorkspace(workspace.id)">Delete</button>
+        <button *ngIf="workspace.isEditing" (click)="cancelEdit(workspace)">Cancel</button>
+      </div>
     </div>
     <button class="flexItem" [routerLink]="'../addWorkspace'">+</button>
   </div>
   <div id="navigation">
-    <p>View: </p>
-    <a href="" (click)="goToCalendar()"> Calendar </a>
+    <p>View:</p>
+    <a href="#" [routerLink]="'../Calendar'">Calendar</a>
   </div>
 </section>
+
+
