@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-
-import { BrowserModule } from '@angular/platform-browser';
-
+import {Component} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {WorkspacesComponent} from "./components/workspaces/workspaces.component";
+import {AddWorkspacesComponent} from "./components/add-workspaces/add-workspaces.component";
+import {CommonModule} from '@angular/common';
+import {NgForOf} from "@angular/common";
 import { RouterOutlet } from '@angular/router';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { NgOptimizedImage } from '@angular/common';
@@ -11,8 +13,6 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from "./footer/footer.component";
 import { SignoutComponent } from "./signout/signout.component";
 import { HomeComponent } from "./home/home.component";
-import { WorkspacesComponent } from "./components/workspaces/workspaces.component";
-import { AddWorkspacesComponent } from "./components/add-workspaces/add-workspaces.component";
 import { PersonalListComponent } from "./personal-list/personal-list.component";
 import { PersonalTaskCreationComponent } from "./personal-task-creation/personal-task-creation.component";
 import { WorkspacetasksService } from "./services/workspacetasks";
@@ -23,19 +23,22 @@ import { WorkspacetasksService } from "./services/workspacetasks";
   standalone: true,
   imports: [
     RouterOutlet,
-    FormGroup,
     NgOptimizedImage,
     ReactiveFormsModule,
+    HttpClientModule,
+    NgForOf,
+    FormGroup,
+    CommonModule,
     HeaderComponent,
-    HomeComponent,
-    HomepageComponent,
-    SignoutComponent,
     FooterComponent,
+  HomepageComponent,
     WorkspacesComponent,
     AddWorkspacesComponent,
-    PersonalListComponent,
-    PersonalTaskCreationComponent,
-    BrowserModule,
+    WorkspacetasksService,
+    HomeComponent,
+  SignoutComponent
+  ],
+templateUrl: './app.component.html',
 
   ],
   providers: [
@@ -43,10 +46,12 @@ import { WorkspacetasksService } from "./services/workspacetasks";
   ],
 
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
+})
 
 })
 
 export class AppComponent {
-  title = 'priority-panda';
+  title: any;
+
 }

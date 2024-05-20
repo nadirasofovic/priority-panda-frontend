@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "priority-panda-frontend",
-=======
-  "name": "priority-panda",
->>>>>>> origin/main
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,32 +12,23 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@angular/cdk": "^17.3.2",
-=======
->>>>>>> origin/main
-=======
     "@angular/cdk": "^17.3.3",
->>>>>>> origin/main
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@angular/material": "^17.3.2",
-=======
->>>>>>> origin/main
-=======
-    "@angular/material": "^17.3.3",
->>>>>>> origin/main
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
+<<<<<<< HEAD
+    "angular-calendar": "^0.31.1",
+    "angularx-flatpickr": "^7.3.0",
+    "date-fns": "^3.6.0",
+=======
     "@angular/ssr": "^17.3.3",
     "express": "^4.18.2",
+>>>>>>> origin/main
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -62,6 +49,10 @@
     "typescript": "~5.4.2"
   }
 <<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -70,3 +61,4 @@
 =======
 }
 >>>>>>> ed1e1901a44e0d5fbb1b87673a1930310cac6ef4
+>>>>>>> origin/main

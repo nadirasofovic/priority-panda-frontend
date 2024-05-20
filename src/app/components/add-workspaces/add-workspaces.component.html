@@ -2,7 +2,7 @@
   <div id="form">
     <p>Workspace creation: </p>
 
-    <form [formGroup]="form" (ngSubmit)="submitThis()">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
       <div class="inputs">
         <label for="title1">Title:</label><br>
         <input type="text" id="title1" name="title1" formControlName="title"> <br> <br>
@@ -27,3 +27,4 @@
   </div>
   <a [routerLink]="'../Workspaces'"> My Workspace List</a>
 </section>
+
