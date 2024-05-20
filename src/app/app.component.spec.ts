@@ -34,4 +34,5 @@ describe('AppComponent', () => {
       expect(compiled.querySelector('h1')?.textContent).toContain('Hello, priority-panda-frontend');
       //expect(compiled.querySelector('h1')?.textContent).toContain('Hello, priority-panda');
     });
-  })}
+
+  });
