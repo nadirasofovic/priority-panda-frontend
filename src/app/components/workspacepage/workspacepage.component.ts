@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
-import { WorkspacetasksService } from "../services/workspacetasks";
+import { WorkspacetasksService } from "../../services/workspacetasks";
 import { OnInit } from '@angular/core';
 import {NgForOf} from "@angular/common";
 
