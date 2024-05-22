@@ -67,4 +67,4 @@ component:HomepageComponent
 
 })
 
-export class AppRoutingModule { };
+export class AppRoutingModule { }

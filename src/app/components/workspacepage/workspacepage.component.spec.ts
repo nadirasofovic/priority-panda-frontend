@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkspacePageComponent } from './workspacepage.component';
+import { WorkspacepageComponent } from './workspacepage.component';
 
 describe('WorkspacepageComponent', () => {
-  let component: WorkspacePageComponent;
-  let fixture: ComponentFixture<WorkspacePageComponent>;
+  let component: WorkspacepageComponent;
+  let fixture: ComponentFixture<WorkspacepageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WorkspacePageComponent]
+      imports: [WorkspacepageComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(WorkspacePageComponent);
+
+    fixture = TestBed.createComponent(WorkspacepageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -37,7 +37,7 @@ import {BadgesComponent} from "./components/badges/badges.component";
     PersonalTaskCreationComponent,
     BadgesComponent,
     HomeComponent,
-  SignoutComponent
+    SignoutComponent
   ],
 
   templateUrl: './app.component.html',
