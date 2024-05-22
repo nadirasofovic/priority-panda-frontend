@@ -7,12 +7,12 @@ import {Badge} from "../methods/badge.model";
   providedIn: 'root'
 })
 export class BadgeService {
-  private baseUrl = '/api/badges';
+  private url = 'https://localhost:8080/badges';
 
   constructor(private http: HttpClient) { }
 
   getBadgesByUserId(userId: number): Observable<Badge[]> {
-    return this.http.get<Badge[]>(`${this.baseUrl}/user/${userId}`);
+    return this.http.get<Badge[]>(`${this.url}/user/${userId}`);
   }
 
 }
