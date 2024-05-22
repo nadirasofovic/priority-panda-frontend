@@ -3,7 +3,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import {NgForOf} from "@angular/common";
 import { RouterOutlet } from '@angular/router';
-import {FormGroup,ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from "@angular/forms";
 import {WorkspacesComponent} from "./components/workspaces/workspaces.component";
 import {AddWorkspacesComponent} from "./components/add-workspaces/add-workspaces.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -27,7 +27,6 @@ import {BadgesComponent} from "./components/badges/badges.component";
     ReactiveFormsModule,
     HttpClientModule,
     NgForOf,
-    FormGroup,
     CommonModule,
     HeaderComponent,
     FooterComponent,
@@ -48,4 +47,5 @@ import {BadgesComponent} from "./components/badges/badges.component";
 
 export class AppComponent {
   title: any;
+
 }
