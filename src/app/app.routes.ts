@@ -8,6 +8,7 @@ import {HomeComponent} from './components/home/home.component';
 import {SignoutComponent} from "./components/signout/signout.component";
 import {PersonalListComponent} from "./components/personal-list/personal-list.component";
 import {PersonalTaskCreationComponent} from "./components/personal-task-creation/personal-task-creation.component";
+import {BadgesComponent} from "./components/badges/badges.component";
 
 export const routes: Routes = [
   {
@@ -46,6 +47,10 @@ component:HomepageComponent
 
   { path: 'personal-task-creation',
     component: PersonalTaskCreationComponent
+  },
+  {
+    path:'badges',
+    component:BadgesComponent
   },
 
   { path: '',

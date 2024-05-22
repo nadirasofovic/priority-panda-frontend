@@ -21,12 +21,6 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('priority-panda-frontend');
 
 
-    it(`should have the 'priority-panda' title`, () => {
-      const fixture = TestBed.createComponent(AppComponent);
-      const app = fixture.componentInstance;
-      expect(app.title).toEqual('priority-panda');
-    });
-
     it('should render title', () => {
       const fixture = TestBed.createComponent(AppComponent);
       fixture.detectChanges();
@@ -35,4 +29,4 @@ describe('AppComponent', () => {
       //expect(compiled.querySelector('h1')?.textContent).toContain('Hello, priority-panda');
     });
 
-  });
+  })})

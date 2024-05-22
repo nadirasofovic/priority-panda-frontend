@@ -6,15 +6,15 @@ import { RouterOutlet } from '@angular/router';
 import {FormGroup,ReactiveFormsModule} from "@angular/forms";
 import {WorkspacesComponent} from "./components/workspaces/workspaces.component";
 import {AddWorkspacesComponent} from "./components/add-workspaces/add-workspaces.component";
-import {WorkspacetasksService} from "./services/workspacetasks";
-import { HeaderComponent } from "./header/header.component";
+import { HeaderComponent } from "./components/header/header.component";
 import { HomepageComponent } from "./components/homepage/homepage.component";
-import { FooterComponent } from "./footer/footer.component";
+import { FooterComponent } from "./components/footer/footer.component";
 import { SignoutComponent } from "./components/signout/signout.component";
 import { HomeComponent } from "./components/home/home.component";
 import {NgOptimizedImage} from "@angular/common";
 import {PersonalListComponent} from "./components/personal-list/personal-list.component";
 import {PersonalTaskCreationComponent} from "./components/personal-task-creation/personal-task-creation.component";
+import {BadgesComponent} from "./components/badges/badges.component";
 
 
 
@@ -35,8 +35,8 @@ import {PersonalTaskCreationComponent} from "./components/personal-task-creation
     WorkspacesComponent,
     AddWorkspacesComponent,
     PersonalListComponent,
-    WorkspacetasksService,
-  PersonalTaskCreationComponent,
+    PersonalTaskCreationComponent,
+    BadgesComponent,
     HomeComponent,
   SignoutComponent
   ],

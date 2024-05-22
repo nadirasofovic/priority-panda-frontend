@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Badge} from "../../badge.model";
+import {Badge} from "../../methods/badge.model";
 import {BadgeService} from "../../services/badges";
 
 @Component({
