@@ -1,0 +1,16 @@
+<section>
+  <div id="view">
+    <h2>View:</h2>
+    <label>
+      <input type="checkbox" value="personal" (change)="onTaskTypeChange($event)" checked> Personal
+    </label>
+    <label>
+      <input type="checkbox" value="workspace" (change)="onTaskTypeChange($event)" checked> Workspace
+    </label>
+  </div>
+  <div id="calendar">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+</section>
+
+
