@@ -20,12 +20,11 @@
         <button *ngIf="workspace.isEditing" (click)="cancelEdit(workspace)">Cancel</button>
       </div>
     </div>
-    <button class="flexItem" [routerLink]="'../addWorkspace'">+</button>
+    <button class="flexItem" routerLink="/addWorkspace">+</button>
   </div>
   <div id="navigation">
     <p>View:</p>
-    <a href="#" [routerLink]="'../Calendar'">Calendar</a>
-  </div>
+    <a routerLink="/Calendar">Calendar</a>  </div>
 </section>
 
 

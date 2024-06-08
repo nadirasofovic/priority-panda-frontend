@@ -32,9 +32,9 @@ export class HomepageComponent {
 
   submitData({type}: { type: 'login' | 'signup' }) {
     if (type === 'login') {
-      this.form.patchValue({isLogin: true}); // Set isLogin to true for login type
+      this.form.patchValue({isLogin: true});
     } else {
-      this.form.patchValue({isLogin: false}); // Set isLogin to false for register type
+      this.form.patchValue({isLogin: false});
     }
     console.log('Form:', this.form.value);
   }

@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
-    provideClientHydration()
+    provideClientHydration(), provideAnimationsAsync('noop')
   ]
 };
 
