@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { RouterLink } from "@angular/router";
+import { FormBuilder, FormGroup} from "@angular/forms";
 import { AddWorkspaceService } from '../../services/add-workspace-service';
 import {Subject, takeUntil} from "rxjs";
 import {WorkspaceDto} from "../../methods/workspace-dto.interface";
@@ -9,11 +8,6 @@ import {ViewWorkspacesService} from "../../services/view-workspaces-service";
 @Component({
   selector: 'app-add-workspaces',
   templateUrl: './add-workspaces.component.html',
-  standalone: true,
-  imports: [
-    RouterLink,
-    ReactiveFormsModule
-  ],
   styleUrls: ['./add-workspaces.component.css']
 })
 export class AddWorkspacesComponent {

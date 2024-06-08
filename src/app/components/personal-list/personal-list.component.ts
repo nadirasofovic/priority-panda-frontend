@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import {FooterComponent} from "../footer/footer.component";
+import {HeaderComponent} from "../header/header.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
 
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 
   templateUrl: './personal-list.component.html',
   standalone: true,
+  imports: [
+    FooterComponent,
+    HeaderComponent,
+    RouterLink
+  ],
 
   styleUrls: ['./personal-list.component.css']
 

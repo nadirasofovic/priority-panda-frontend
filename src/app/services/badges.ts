@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Badge} from "../methods/badge.model";
+import {Badge} from "../methods/badge-dto.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -16,3 +16,7 @@ export class BadgeService {
   }
 
 }
+
+
+
+
