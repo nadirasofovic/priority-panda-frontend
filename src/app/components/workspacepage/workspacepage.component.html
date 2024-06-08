@@ -1,62 +1,49 @@
 <app-header></app-header>
 
 <section>
-  <div id="workspaces"> <br>
+  <div id="workspaces">
+    <br>
     <h2>Software Engineering Project</h2>
-  </div> <br>
+  </div>
+  <br>
 
-  <div id="flex" >
-
+  <div id="flex">
     <div class="prvi">
-    <h2>To-Do</h2>
-    <div class="to-do" *ngFor="let workspace of allworkspaces" >
-      <h3>{{workspace.title}}</h3>
-      <p>{{workspace.description}}</p>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
-    </div>
+      <h2>To-Do</h2>
+      <div class="to-do" *ngFor="let task of allworkspaces['to-do']">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <a href="">Add Comment</a> <br>
+        <a href="">Edit</a>
+        <a href="">Delete</a>
+      </div>
     </div>
 
     <div class="drugi">
-    <h2>Doing</h2>
-    <div class="doing">
-      <h3>Ena: Create Sitemap</h3>
-      <h3>Due Date:13.03.2024.</h3>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
-    </div>
+      <h2>Doing</h2>
+      <div class="doing" *ngFor="let task of allworkspaces['doing']">
+        <h3>{{ task.title }}</h3>
+        <p>Due Date: {{ task.dueDate | date }}</p>
+        <a href="">Add Comment</a> <br>
+        <a href="">Edit</a>
+        <a href="">Delete</a>
+      </div>
     </div>
 
     <div class="treci">
-    <h2>Done</h2>
-    <div class="done">
-      <h3> Hanadi: Define 2 features </h3>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
-      <h3> Nadira: Define 2 features </h3>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
-      <h3> Džejla: Define 2 features </h3>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
-      <h3> Ena: Define 2 features </h3>
-      <a href=""> Add Comment</a> <br>
-      <a href=""> Edit </a>
-      <a href=""> Delete </a>
+      <h2>Done</h2>
+      <div class="done" *ngFor="let task of allworkspaces['done']">
+        <h3>{{ task.title }}</h3>
+        <a href="">Add Comment</a> <br>
+        <a href="">Edit</a>
+        <a href="">Delete</a>
+      </div>
     </div>
-    </div>
-
   </div>
 
   <div class="navigation">
-    <a href=""> View Workspaces </a>
+    <a href="">View Workspaces</a>
   </div>
-
 </section>
 
 <app-footer></app-footer>
