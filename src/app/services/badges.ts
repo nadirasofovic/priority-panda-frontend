@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Badge} from "../methods/badge-dto.interface";
+import { Badge } from '../methods/badge-dto.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,5 @@ export class BadgeService {
   getBadgesByUserId(userId: number): Observable<Badge[]> {
     return this.http.get<Badge[]>(`${this.url}/user/${userId}`);
   }
-
 }
-
-
-
 

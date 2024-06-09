@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Badge} from "../../methods/badge-dto.interface";
 import {BadgeService} from "../../services/badges";
 
@@ -7,15 +7,22 @@ import {BadgeService} from "../../services/badges";
   templateUrl: './badges.component.html',
   styleUrls: ['./badges.component.css']
 })
-export class BadgesComponent {
+export class BadgesComponent implements OnInit {
   badges: Badge[] = [];
+  userId: number = 1;
 
-  constructor(private badgeService: BadgeService) { }
+  constructor(private badgeService: BadgeService) {}
 
   ngOnInit(): void {
-    const userId = 1;
-    this.badgeService.getBadgesByUserId(userId).subscribe((data: Badge[]) => {
-      this.badges = data;
-    });
+    this.badgeService.getBadgesByUserId(this.userId).subscribe(
+      (data: Badge[]) => {
+        this.badges = data;
+      },
+      (error) => {
+        console.error('Error fetching badges', error);
+      }
+    );
   }
 }
+
+
