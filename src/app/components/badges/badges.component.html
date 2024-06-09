@@ -3,8 +3,10 @@
   <h1>Badges</h1>
   <ul>
     <li *ngFor="let badge of badges">
-      {{ badge.name }}: {{ badge.description }}
+      {{ badge.name }}: {{ badge.description }} <span *ngIf="badge.complete"> - Complete</span>
     </li>
   </ul>
 </div>
 <app-footer></app-footer>
+
+

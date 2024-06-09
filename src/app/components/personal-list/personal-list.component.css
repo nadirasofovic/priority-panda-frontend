@@ -10,25 +10,33 @@
   cursor: pointer;
 }
 
-main {
-  background-color: white;
-  padding: 20px;
-}
-
 .content-container {
   display: flex;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .sidebar {
   width: 20%;
   padding-right: 20px;
   font-size: 24px;
 }
+=======
+.sidebar {
+  width: 20%;
+  padding-right: 20px;
+}
+
+.sidebar > a {
+  display: block;
+  text-decoration: none;
+  color: purple;
+  margin-bottom: 10px;
+}
+
 
 .sidebar h3 {
-  color: #333;
-  font-size: 24px;
+  margin-top: 100px;
   margin-bottom: 10px;
 }
 
@@ -38,13 +46,92 @@ main {
 
 .to-do-list {
   width: 75%;
+
 }
 
 .to-do-list h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+
+section h3 {
+  margin-bottom: 10px;
+}
+
+.work-section {
+  background-color: purple;
+  color: white;
+}
+
+.finances-section {
+  background-color: darkgrey;
+  color: white;
+}
+
+.health-section {
+  background-color: lightgrey;
+  color: black;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.edit-btn, .delete-btn, .add-btn {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover, .delete-btn:hover, .add-btn:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.line {
+  border-top: 1px solid darkgrey;
+  margin-top: 10px;
+}
+
+.minus-signs {
+  display: flex;
+  justify-content: center;
+}
+
+.minus-signs span {
+  margin: 0 2px;
+}
+
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.nav-buttons {
+  margin-left: auto;
+}
+
+.nav-buttons button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+main {
+  padding: 20px;
+}
+
+>>>>>>> 3e3396bc0fb71be34e3daa2bb48809b89c72ecb8
+
 
 .dijelovi {
   display: flex;
@@ -96,6 +183,7 @@ section p {
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 footer {
   background-color: #333;
   color: white;
@@ -104,6 +192,16 @@ footer {
 }
 
 .work-section {
+=======
+
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.work-section{
+>>>>>>> 3e3396bc0fb71be34e3daa2bb48809b89c72ecb8
   padding-bottom: 120px;
 }
 

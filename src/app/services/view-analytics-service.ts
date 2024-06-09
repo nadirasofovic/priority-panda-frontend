@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +9,13 @@ export class AnalyticsService {
   private completedTasks = 0;
   private totalTasks = 10;
   private startTime: number;
+  private url = 'https://localhost:8080/analytics';
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.startTime = Date.now();
   }
 
   getCompletedTasks(): number {
-
     return this.completedTasks;
   }
 
@@ -29,5 +31,24 @@ export class AnalyticsService {
 
   updateCompletedTasks(completedTasks: number) {
     this.completedTasks = completedTasks;
+    this.updateAnalyticsOnServer();
+  }
+
+  private updateAnalyticsOnServer(): void {
+    const analyticsData = {
+      completionRate: this.completedTasks / this.totalTasks,
+      timeSpent: this.getTimeSpentMinutes(),
+      userId: 1, // Assuming a user ID for example purposes
+      loginDate: new Date()
+    };
+
+    this.http.post(this.url, analyticsData).subscribe(
+      response => console.log('Analytics updated', response),
+      error => console.error('Error updating analytics', error)
+    );
+  }
+
+  fetchAnalytics(): Observable<any> {
+    return this.http.get(this.url + '/user/1'); // Assuming a user ID for example purposes
   }
 }
