@@ -1,0 +1,30 @@
+<section>
+  <div id="form">
+    <p>Workspace creation: </p>
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <div class="inputs">
+        <label for="title1">Title:</label><br>
+        <input type="text" id="title1" name="title1" formControlName="title"> <br> <br>
+      </div>
+
+      <div class="inputs">
+        <label for="description1">Description:</label><br>
+        <input type="text" id="description1" name="description1" formControlName="description"> <br> <br>
+      </div>
+
+      <div class="inputs">
+        <label for="dueDate1">Due Date:</label><br>
+        <input type="date" id="dueDate1" name="dueDate1" formControlName="dueDate"><br> <br>
+      </div>
+
+      <div class="inputs">
+        <label for="members1">Add Members:</label><br>
+        <input type="text" id="members1" name="members1" formControlName="addMembers"><br> <br>
+      </div>
+      <input type="submit" value="Submit" id="submit">
+    </form>
+  </div>
+  <a [routerLink]="'../Workspaces'"> My Workspace List</a>
+</section>
+
