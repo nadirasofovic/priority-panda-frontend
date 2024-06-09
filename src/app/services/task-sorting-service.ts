@@ -1,29 +1,25 @@
 import { Injectable } from '@angular/core';
-import {TaskDto} from "../methods/task-dto.interface";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { TaskDto } from "../methods/task-dto.interface";
 
 @Injectable({
   providedIn: 'root'
 })
-export class TaskSortingService {
-  constructor() {}
+export class TaskService {
+  private baseUrl = 'http://localhost:8080/tasks';
 
-  sortByDueDate(tasks: TaskDto[]): TaskDto[] {
-    return tasks.sort((a, b) => {
-      return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
-    });
+  constructor(private http: HttpClient) {}
+
+  sortByDueDate(): Observable<TaskDto[]> {
+    return this.http.get<TaskDto[]>(`${this.baseUrl}/sort/byDueDate`);
   }
 
-  sortByPriority(tasks: TaskDto[]): TaskDto[] {
-    return tasks.sort((a, b) => {
-      const priorityOrder = { low: 1, medium: 2, high: 3 };
-      return priorityOrder[a.priority] - priorityOrder[b.priority];
-    });
+  sortByPriority(): Observable<TaskDto[]> {
+    return this.http.get<TaskDto[]>(`${this.baseUrl}/sort/byPriority`);
   }
 
-  sortByCreationDate(tasks: TaskDto[]): TaskDto[] {
-    return tasks.sort((a, b) => {
-      return new Date(a.creationDate).getTime() - new Date(b.creationDate).getTime();
-    });
+  sortByCreationDate(): Observable<TaskDto[]> {
+    return this.http.get<TaskDto[]>(`${this.baseUrl}/sort/byCreationDate`);
   }
 }
-
