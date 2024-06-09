@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-header',
-  standalone: true,
-  imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  standalone: true,
+  imports: [
+    RouterLink
+  ],
+  styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent {
   goToHome() {
-    return console.log("This navigates to homepage");
+    console.log("This navigates to homepage");
   }
 
   goToSignOut() {
-    return console.log("This navigates to sign out page");
+    console.log("This navigates to sign out page");
   }
 }
+

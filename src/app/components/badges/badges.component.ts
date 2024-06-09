@@ -1,24 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {Badge} from "../../methods/badge.model";
+import { Component } from '@angular/core';
+import {Badge} from "../../methods/badge-dto.interface";
 import {BadgeService} from "../../services/badges";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import {NgForOf, NgIf} from "@angular/common";
-import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-badges',
   templateUrl: './badges.component.html',
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    RouterLink,
-    NgForOf,
-    NgIf,
-  ],
-  standalone: true,
   styleUrls: ['./badges.component.css']
 })
-export class BadgesComponent implements OnInit {
+export class BadgesComponent {
   badges: Badge[] = [];
 
   constructor(private badgeService: BadgeService) { }

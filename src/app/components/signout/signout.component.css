@@ -22,7 +22,7 @@ header img {
     text-align: center;
 }
 
-.login-button {
+button {
     font-weight: bold;
     padding: 15px 25px;
     background-color: #d7cdcc;
@@ -35,7 +35,7 @@ header img {
     margin-bottom: 15px;
 }
 
-.login-button:hover {
+button:hover {
     background-color: purple;
     color: white;
 }

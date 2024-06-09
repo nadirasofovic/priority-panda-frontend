@@ -10,6 +10,7 @@ import {FooterComponent} from "../footer/footer.component";
 
     templateUrl: './personal-task-creation.component.html',
     standalone: true,
+
   imports: [
     HeaderComponent,
     FooterComponent

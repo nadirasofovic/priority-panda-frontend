@@ -4,49 +4,30 @@
   <div class="content-container">
     <div class="sidebar">
       <h3>View:</h3>
-      <p>Calendar</p>
-      <p>Productivity</p>
-      <p>Badges</p>
+      <button><a routerLink="/calendar">Calendar</a></button>
+      <button><a routerLink="/analytics">Productivity</a></button>
+      <button><a routerLink="/badges">Badges</a></button>
     </div>
 
     <div class="to-do-list">
       <h2>Your To-Do List:</h2>
       <div class="dijelovi">
-      <section class="work-section">
-        <h3 class="purple">Work</h3>
-        <p>Weekly meeting with Hanadi, Ena, and Dzejla.</p>
-        <div class="actions">
-          <button class="edit-btn">Edit</button>
-          <button class="delete-btn">Delete</button>
-          <button class="add-btn">+</button>
-        </div>
-      </section>
-
-      <section class="finances-section">
-        <h3 class="dark-grey">Finances</h3>
-        <p>By 8th May, pay bills and rent.</p>
-        <div class="actions">
-          <button class="edit-btn">Edit</button>
-          <button class="delete-btn">Delete</button>
-          <button class="add-btn">+</button>
-        </div>
-
-      </section>
-
-      <section class="health-section">
-        <h3 class="light-grey">Health</h3>
-        <p>5th May, dentist appointment.</p>
-        <div class="actions">
-          <button class="edit-btn">Edit</button>
-          <button class="delete-btn">Delete</button>
-          <button class="add-btn">+</button>
-        </div>
-      </section>
+        <section *ngFor="let label of labels">
+          <h3>{{ label | uppercase }}</h3>
+          <div *ngFor="let task of getTasksByLabel(label)">
+            <p>{{ task.description }}</p>
+            <div class="actions">
+              <button class="edit-btn" (click)="editTask(task)">Edit</button>
+              <button class="delete-btn" (click)="deleteTask(task)">Delete</button>
+              <!-- If you implement markAsDone method, you can uncomment this button -->
+              <!-- <button class="done-btn" (click)="markAsDone(task)">Done</button> -->
+            </div>
+          </div>
+          <button class="add-btn" (click)="addTask(label)">+</button>
+        </section>
+      </div>
     </div>
-  </div></div>
+  </div>
 </main>
 
-
 <app-footer></app-footer>
-
-

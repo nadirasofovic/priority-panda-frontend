@@ -1,5 +1,5 @@
 export interface Badge {
-  id?: number;
+  id: number;
   name: string;
   description: string;
   userId: number;

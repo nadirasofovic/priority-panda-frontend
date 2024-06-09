@@ -16,7 +16,9 @@ header {
 h1 {
   font-weight: bold;
 }
-
+a{
+  text-decoration: none;
+}
 img {
   width: 70px;
   height: 60px;
@@ -24,6 +26,10 @@ img {
 
 #buttons {
   display: flex;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 
 #buttons > button {
@@ -37,7 +43,7 @@ img {
   border-radius: 5px;
 }
 
-button:hover {
+#button:hover {
   box-shadow: 5px 5px 5px #444444;
   background-color: #8F4B7F;
 }
