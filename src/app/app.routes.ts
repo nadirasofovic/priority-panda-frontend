@@ -12,7 +12,6 @@ import {PersonalListComponent} from "./components/personal-list/personal-list.co
 import {PersonalTaskCreationComponent} from "./components/personal-task-creation/personal-task-creation.component";
 import {BadgesComponent} from "./components/badges/badges.component";
 
-
 const routes: Routes = [
   { path: 'addWorkspace', component: AddWorkspacesComponent },
   { path: 'workspaces', component: WorkspacesComponent }, //ne
@@ -22,8 +21,8 @@ const routes: Routes = [
   { path: 'sign-out', component: SignoutComponent },
   { path: 'personalList', component: PersonalListComponent },
   { path: 'personalTaskCreation', component: PersonalTaskCreationComponent },
-  { path: 'badges', component: BadgesComponent },
-  { path: 'calendar', component: CalendarComponent },
+  { path: 'Badges', component: BadgesComponent },
+  { path: 'Calendar', component: CalendarComponent },
   { path: 'analytics', component: AnalyticsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'workspaces' }

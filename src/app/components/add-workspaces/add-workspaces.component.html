@@ -1,9 +1,9 @@
 <app-header></app-header>
 
 <section>
+
   <div id="form">
     <p>Workspace creation: </p>
-
     <form [formGroup]="form" (ngSubmit)="submitForm()">
       <div class="inputs">
         <label for="title1">Title:</label><br>
@@ -24,10 +24,13 @@
         <label for="members1">Add Members:</label><br>
         <input type="text" id="members1" name="members1" formControlName="addMembers"><br> <br>
       </div>
+
       <input type="submit" value="Submit" id="submit">
     </form>
   </div>
+
   <a routerLink='/Workspaces'> My Workspace List</a>
+
 </section>
 
 <app-footer></app-footer>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
@@ -10,10 +10,10 @@ import interactionPlugin from '@fullcalendar/interaction';
 export class CalendarComponent {
   calendarOptions: any;
   allTasks = [
-    { title: 'Personal Task 1', date: '2023-06-07', type: 'personal' },
-    { title: 'Workspace Task 1', date: '2023-06-08', type: 'workspace' },
-    { title: 'Personal Task 2', date: '2023-06-09', type: 'personal' },
-    { title: 'Workspace Task 2', date: '2023-06-10', type: 'workspace' },
+    {title: 'Personal Task 1', date: '2023-06-07', type: 'personal'},
+    {title: 'Workspace Task 1', date: '2023-06-08', type: 'workspace'},
+    {title: 'Personal Task 2', date: '2023-06-09', type: 'personal'},
+    {title: 'Workspace Task 2', date: '2023-06-10', type: 'workspace'},
   ];
   selectedTypes: Set<string> = new Set(['personal', 'workspace']);
   filteredTasks = this.allTasks;
@@ -45,7 +45,7 @@ export class CalendarComponent {
       this.selectedTypes.delete(taskType);
     }
     this.updateFilteredTasks();
-    this.calendarOptions = { ...this.calendarOptions, events: this.filteredTasks };
+    this.calendarOptions = {...this.calendarOptions, events: this.filteredTasks};
   }
 
   updateFilteredTasks() {

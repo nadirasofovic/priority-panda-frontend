@@ -11,6 +11,7 @@ section > a {
   font-weight: bold;
   font-size: 25px;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 #form {
@@ -52,15 +53,4 @@ input {
 #submit:hover {
   box-shadow: 5px 5px 5px #444444;
   background-color: #8F4B7F;
-}
-
-@media only screen and (max-width: 600px) {
-  section {
-    width: 600px;
-    flex-direction: column;
-  }
-
-  #form {
-    margin-bottom: 20px;
-  }
 }

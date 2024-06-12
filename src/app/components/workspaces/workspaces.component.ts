@@ -1,12 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ViewWorkspacesService } from "../../services/view-workspaces-service";
-import { EditWorkspaceService } from "../../services/edit-workspace-service";
-import { Subject, takeUntil } from "rxjs";
-import { WorkspaceDto } from "../../methods/workspace-dto.interface";
-import { ViewOneWorkspaceService } from "../../services/view-workspace-service";
-import { deleteWorkspaceService } from "../../services/delete-workspace-service";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ViewWorkspacesService} from "../../services/view-workspaces-service";
+import {EditWorkspaceService} from "../../services/edit-workspace-service";
+import {Subject, takeUntil} from "rxjs";
+import {WorkspaceDto} from "../../methods/workspace-dto.interface";
+import {ViewOneWorkspaceService} from "../../services/view-workspace-service";
+import {deleteWorkspaceService} from "../../services/delete-workspace-service";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import { NgModule } from '@angular/core';
 
 export interface EditableWorkspaceDto extends WorkspaceDto {
   isEditing: boolean;
@@ -18,7 +17,7 @@ export interface EditableWorkspaceDto extends WorkspaceDto {
   styleUrls: ['./workspaces.component.css']
 })
 
-export class WorkspacesComponent{
+export class WorkspacesComponent {
   form: FormGroup;
   unsubscribe$: Subject<void> = new Subject<void>();
   workspaces: EditableWorkspaceDto[] = [];
@@ -28,12 +27,13 @@ export class WorkspacesComponent{
               private viewWorkspacesService: ViewWorkspacesService,
               private viewOneWorkspaceService: ViewOneWorkspaceService,
               private deleteWorkspaceService: deleteWorkspaceService,
-              private editWorkspaceService: EditWorkspaceService) { this.form = this.formBuilder.group({
-    title: [''],
-    description: [''],
-    dueDate: [''],
-    addMembers: ['']
-  });
+              private editWorkspaceService: EditWorkspaceService) {
+    this.form = this.formBuilder.group({
+      title: [''],
+      description: [''],
+      dueDate: [''],
+      addMembers: ['']
+    });
   }
 
   ngOnInit(): void {
@@ -44,7 +44,7 @@ export class WorkspacesComponent{
     this.viewWorkspacesService.getAllWorkspaces()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((workspaces: WorkspaceDto[]) => {
-        this.workspaces = workspaces.map(workspace => ({ ...workspace, isEditing: false }));
+        this.workspaces = workspaces.map(workspace => ({...workspace, isEditing: false}));
       });
   }
 

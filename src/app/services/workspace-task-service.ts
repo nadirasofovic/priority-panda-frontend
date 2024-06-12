@@ -10,13 +10,6 @@ export class WorkspaceTaskService {
 
   constructor() {}
 
-  setTasks(tasks: TaskDto[]): void {
-    this.tasks.next(tasks);
-  }
-
-  getTasks(): Observable<TaskDto[]> {
-    return this.tasks.asObservable();
-  }
 
   getTasksByWorkspaceAndStatus(workspaceId: number, status: string): TaskDto[] {
     const currentTasks = this.tasks.getValue();

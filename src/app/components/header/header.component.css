@@ -55,9 +55,3 @@ a {
 #titleAndIcon > img {
   margin-right: 10px;
 }
-@media only screen and (max-width: 600px) {
-  #content {
-    width: 600px;
-    padding: 10px;
-  }
-}

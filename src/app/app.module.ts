@@ -20,7 +20,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
-import {BadgeService} from "./services/badges";
+import {BadgeService} from "./services/view-badges-service";
 import {WorkspacepageComponent} from "./components/workspacepage/workspacepage.component";
 
 @NgModule({

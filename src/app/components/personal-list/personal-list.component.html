@@ -4,9 +4,9 @@
   <div class="content-container">
     <div class="sidebar">
       <h3>View:</h3>
-      <a routerLink="/calendar">Calendar</a>
+      <a routerLink="/Calendar">Calendar</a>
       <a routerLink="/analytics">Productivity</a>
-      <a routerLink="/badges">Badges</a>
+      <a routerLink="/Badges">Badges</a>
     </div>
 
     <div class="to-do-list">
@@ -19,8 +19,7 @@
             <div class="actions">
               <button class="edit-btn" (click)="editTask(task)">Edit</button>
               <button class="delete-btn" (click)="deleteTask(task)">Delete</button>
-              <!-- If you implement markAsDone method, you can uncomment this button -->
-              <!-- <button class="done-btn" (click)="markAsDone(task)">Done</button> -->
+              <button class="done-btn" (click)="markAsDone(task)">Done</button>
             </div>
           </div>
           <button class="add-btn" (click)="addTask(label)">+</button>

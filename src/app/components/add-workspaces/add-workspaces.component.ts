@@ -26,10 +26,6 @@ export class AddWorkspacesComponent {
     });
   }
 
-  ngOnInit(): void {
-    this.loadWorkspaces();
-  }
-
   private loadWorkspaces(): void {
     this.viewWorkspacesService.getAllWorkspaces()
       .pipe(takeUntil(this.unsubsrcibe$))
@@ -51,7 +47,7 @@ export class AddWorkspacesComponent {
       .subscribe(() =>  {
         this.loadWorkspaces();
     })
-    }
+  }
 }
 
 

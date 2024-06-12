@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -12,12 +12,5 @@ import {RouterLink} from "@angular/router";
 })
 
 export class HeaderComponent {
-  goToHome() {
-    console.log("This navigates to homepage");
-  }
-
-  goToSignOut() {
-    console.log("This navigates to sign out page");
-  }
 }
 

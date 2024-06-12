@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Badge} from "../../methods/badge-dto.interface";
-import {BadgeService} from "../../services/badges";
+import {BadgeService} from "../../services/view-badges-service";
 
 @Component({
   selector: 'app-badges',
@@ -11,7 +11,8 @@ export class BadgesComponent implements OnInit {
   badges: Badge[] = [];
   userId: number = 1;
 
-  constructor(private badgeService: BadgeService) {}
+  constructor(private badgeService: BadgeService) {
+  }
 
   ngOnInit(): void {
     this.badgeService.getBadgesByUserId(this.userId).subscribe(

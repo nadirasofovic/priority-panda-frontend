@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {UpperCasePipe} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 interface Task {
   label: string;
@@ -13,20 +14,23 @@ interface Task {
   selector: 'app-personal-list',
   templateUrl: './personal-list.component.html',
   standalone: true,
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    UpperCasePipe
-  ],
+    imports: [
+        HeaderComponent,
+        FooterComponent,
+        UpperCasePipe,
+        RouterLink
+    ],
   styleUrls: ['./personal-list.component.css']
 })
 export class PersonalListComponent implements OnInit {
   tasks: Task[] = [];
   labels: string[] = ['work', 'school', 'personal', 'health', 'finance', 'social', 'other'];
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   getTasksByLabel(label: string): Task[] {
     return this.tasks.filter(task => task.label === label);
@@ -35,7 +39,7 @@ export class PersonalListComponent implements OnInit {
   addTask(label: string): void {
     const description = prompt(`Enter a new task for ${label}`);
     if (description) {
-      this.tasks.push({ label, description, done: false });
+      this.tasks.push({label, description, done: false});
     }
   }
 

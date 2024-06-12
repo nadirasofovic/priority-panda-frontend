@@ -57,6 +57,7 @@ a {
   font-size: 30px;
   color: black;
   font-weight: normal;
+  text-decoration: none; /* Remove underline */
 }
 
 .buttonContainer {
@@ -83,7 +84,6 @@ a {
   border-color: #AFA3A2;
   box-shadow: 5px 5px 5px #444444;
   color: #662C59;
-
 }
 
 @media only screen and (max-width: 600px) {

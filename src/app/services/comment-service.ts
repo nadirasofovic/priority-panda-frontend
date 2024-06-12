@@ -8,7 +8,7 @@ import { CommentDto } from '../methods/comment-dto.interface';
 })
 export class CommentService {
   private comments: BehaviorSubject<CommentDto[]> = new BehaviorSubject<CommentDto[]>([]);
-  private url = 'https://localhost:8080/api/comments';
+  private url = 'https://localhost:8080/comments';
 
   constructor(private http: HttpClient) {}
 

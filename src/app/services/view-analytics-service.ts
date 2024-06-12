@@ -38,7 +38,7 @@ export class AnalyticsService {
     const analyticsData = {
       completionRate: this.completedTasks / this.totalTasks,
       timeSpent: this.getTimeSpentMinutes(),
-      userId: 1, // Assuming a user ID for example purposes
+      userId: 1,
       loginDate: new Date()
     };
 
@@ -47,8 +47,7 @@ export class AnalyticsService {
       error => console.error('Error updating analytics', error)
     );
   }
-
   fetchAnalytics(): Observable<any> {
-    return this.http.get(this.url + '/user/1'); // Assuming a user ID for example purposes
+    return this.http.get(this.url + '/user/1');
   }
 }

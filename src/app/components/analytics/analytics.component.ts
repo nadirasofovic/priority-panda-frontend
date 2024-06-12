@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatProgressBar} from "@angular/material/progress-bar";
 import {DecimalPipe} from "@angular/common";
+import {HeaderComponent} from "../header/header.component";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-analytics',
@@ -8,22 +10,24 @@ import {DecimalPipe} from "@angular/common";
   standalone: true,
   imports: [
     MatProgressBar,
-    DecimalPipe
+    DecimalPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   styleUrls: ['./analytics.component.css']
 })
 export class AnalyticsComponent implements OnInit {
   completedTasks: number = 0;
   totalTasks: number = 0;
-  timeSpent: number = 0; // in minutes
+  timeSpent: number = 0;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
-    // Here, you would typically fetch this data from a service or state management store
-    this.completedTasks = 5; // Example value
-    this.totalTasks = 10; // Example value
-    this.timeSpent = 120; // Example value in minutes
+    this.completedTasks = 5;
+    this.totalTasks = 10;
+    this.timeSpent = 120;
   }
 
   get completedPercentage(): number {

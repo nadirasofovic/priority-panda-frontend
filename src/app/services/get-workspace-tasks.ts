@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-import {Observable, of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { TaskDto } from '../methods/task-dto.interface';
 
-@Injectable({providedIn: "root"})
-
+@Injectable({
+  providedIn: 'root'
+})
 export class WorkspacetasksService {
-  public getWorkspace(): Observable<any[]> {
-    return of([
-      {title: 'Workspace 1', description:'Workspace description'},
-      {title: 'Workspace 2', description:'Workspace description'},
-      {title: 'Workspace 3', description:'Workspace description'},
-    ]);
+
+  private baseUrl = 'http://localhost:8080/workspaces';
+
+  constructor(private http: HttpClient) { }
+
+  getTasksByWorkspaceAndStatus(workspaceId: number, status: string): Observable<TaskDto[]> {
+    return this.http.get<TaskDto[]>(`${this.baseUrl}/${workspaceId}/tasks`, { params: { status } });
   }
 }

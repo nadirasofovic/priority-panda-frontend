@@ -1,12 +1,14 @@
 <app-header></app-header>
-<div>
-  <h1>Badges</h1>
-  <ul>
-    <li *ngFor="let badge of badges">
-      {{ badge.name }}: {{ badge.description }} <span *ngIf="badge.complete"> - Complete</span>
-    </li>
-  </ul>
+<div class="container">
+  <section>
+    <h1>Badges</h1>
+    <div>
+      <ul id="badges">
+        <li *ngFor="let badge of badges" [id]="'badge' + badge.id">
+          {{ badge.name }}: {{ badge.description }} <span *ngIf="badge.complete"> - Complete</span>
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
 <app-footer></app-footer>
-
-

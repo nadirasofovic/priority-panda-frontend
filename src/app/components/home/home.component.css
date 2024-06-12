@@ -4,9 +4,11 @@ body, html {
   padding: 0;
   height: 100%;
 }
-a{
-  text-decoration:none;
+
+a {
+  text-decoration: none;
 }
+
 #titleAndIcon {
   display: flex;
   align-items: center;

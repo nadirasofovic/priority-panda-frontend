@@ -1,16 +1,20 @@
-<app-header></app-header>
-<section>
-  <div id="view">
-    <h2>View:</h2>
-    <label>
-      <input type="checkbox" value="personal" (change)="onTaskTypeChange($event)" checked> Personal
-    </label>
-    <label>
-      <input type="checkbox" value="workspace" (change)="onTaskTypeChange($event)" checked> Workspace
-    </label>
+<div class="container">
+  <app-header></app-header>
+  <div class="main-content">
+    <section>
+      <div id="view">
+        <h2>View:</h2>
+        <label>
+          <input type="checkbox" value="personal" (change)="onTaskTypeChange($event)" checked> Personal
+        </label>
+        <label>
+          <input type="checkbox" value="workspace" (change)="onTaskTypeChange($event)" checked> Workspace
+        </label>
+      </div>
+      <div id="calendar">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    </section>
   </div>
-  <div id="calendar">
-    <full-calendar [options]="calendarOptions"></full-calendar>
-  </div>
-</section>
-<app-footer></app-footer>
+  <app-footer></app-footer>
+</div>
