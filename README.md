@@ -1,31 +1,25 @@
-<<<<<<< HEAD
-# PriorityPandaFrontend
-=======
-# PriorityPanda
->>>>>>> origin/main
+# Priority Panda Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+**Priority Panda Frontend** is the user interface for managing tasks in the **Priority Panda** system, providing a smooth and intuitive experience for users to create, prioritize, and track their tasks. This frontend connects seamlessly with the backend to handle authentication, task management, and notifications. 
 
-## Development server
+The application is built using **React** and is fully responsive, providing an optimal experience for both mobile and desktop users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **User Authentication**: Secure login and registration.
+- **Task Management**: Add, update, delete, and complete tasks.
+- **Task Prioritization**: Set priorities (low, medium, high) for each task.
+- **Task Deadline Management**: View and set deadlines for tasks.
+- **Responsive Design**: Fully responsive layout optimized for mobile and desktop devices.
+- **User-friendly Interface**: Easy-to-use design for efficient task management.
+- **API Integration**: Communicates with the Priority Panda backend API for data handling.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **React.js**: JavaScript library for building user interfaces.
+- **Redux**: For managing application state.
+- **React Router**: For navigation between pages.
+- **Axios**: For making HTTP requests to the backend.
+- **Material-UI**: Component library for a sleek and modern UI.
+- **CSS3**: For styling the application with responsive design.
+- **JWT (JSON Web Tokens)**: For user authentication and session management.
